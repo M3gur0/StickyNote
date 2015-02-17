@@ -1,0 +1,12 @@
+﻿@{
+    Layout = "~/Views/Shared/Note.cshtml";   
+}
+
+<ul id="notes">
+    <li data-ng-repeat="note in notes">
+        <a href="/#/note?title={{note.title}}">
+            <h2>{{ note.title }}</h2>
+            <p>{{ note.content }}</p>
+        </a>
+    </li>
+</ul>
