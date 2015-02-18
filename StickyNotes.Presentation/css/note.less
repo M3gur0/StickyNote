@@ -1,23 +1,43 @@
-﻿.scale {
+﻿@font-face {
+    font-family: 'gooddogregular';
+    src: url('/fonts/GoodDog-webfont.eot');
+    src: url('/fonts/GoodDog-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/GoodDog-webfont.woff') format('woff'), url('/fonts/GoodDog-webfont.ttf') format('truetype'), url('/fonts/GoodDog-webfont.svg#gooddogregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.scale {
     &:hover, &:focus {
-        -moz-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
-        -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
-        box-shadow: 10px 10px 7px rgba(0,0,0,.7);
-        -webkit-transform: scale(1.25);
-        -moz-transform: scale(1.25);
-        -o-transform: scale(1.25);
-        position: relative;
-        z-index: 5;
+        z-index: 15;
+        -webkit-transform: scale(1.35);
+        -moz-transform: scale(1.35);
+        -o-transform: scale(1.35);
+        -moz-transition: -moz-transform .15s linear;
+        -o-transition: -o-transform .15s linear;
+        -webkit-transition: -webkit-transform .15s linear;
+
+        a.note {
+            -moz-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+            -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+            box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+            .rotate(0deg) !important;
+        }
     }
 }
 
-.rotate(@factor, @color) {
+.shadow {
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -moz-transition: -moz-transform .15s linear;
+    -o-transition: -o-transform .15s linear;
+    -webkit-transition: -webkit-transform .15s linear;
+}
+
+.rotate(@factor) {
     -o-transform: rotate(@factor);
     -webkit-transform: rotate(@factor);
     -moz-transform: rotate(@factor);
-    position: relative;
-    top: 5px;
-    background: @color;
 }
 
 ul#notes {
@@ -29,20 +49,43 @@ ul#notes {
         list-style: none;
         margin: 1em;
         float: left;
+        position: relative;
+        .scale;
 
-        &:nth-child(even) a.note {
-            .rotate(4deg, #cfc);
-            .scale;
+        &:before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 60px;
+            top: -15px;
+            width: 75px;
+            height: 25px;
+            z-index: 2;
+            background-color: rgba(243,245,228,0.6);
+            border: 2px solid rgba(255,255,255,0.5);
+            -webkit-box-shadow: 0 0 5px #AAA;
+            -moz-box-shadow: 0 0 5px #AAA;
+            box-shadow: 2px 2px 2px #AAA;
+            -webkit-transform: rotate(-6deg);
+            -moz-transform: rotate(-6deg);
+            -o-transform: rotate(-6deg);
+        }
+
+        &:nth-child(even) {
+            a.note {
+                .rotate(4deg);
+                background: #cfc;
+            }
         }
 
         &:nth-child(3n) a.note {
-            .rotate(-3deg, #ccf);
-            .scale;
+            .rotate(-3deg);
+            background: #ccf;
         }
 
         &:nth-child(5n) a.note {
-            .rotate(5deg, #ffc);
-            .scale;
+            .rotate(5deg);
+            background: #ffc;
         }
     }
 }
@@ -53,14 +96,8 @@ a.note {
     background: #ffc;
     display: block;
     padding: 1em;
-    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
-    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    -moz-transition: -moz-transform .15s linear;
-    -o-transition: -o-transform .15s linear;
-    -webkit-transition: -webkit-transform .15s linear;
     overflow: hidden;
-    .scale;
+    .shadow;
 
     &.listing {
         height: 16em;
@@ -73,13 +110,14 @@ a.note {
     }
 
     h2 {
-        font-size: 140%;
+        font-size: 220%;
         font-weight: bold;
         padding-bottom: 10px;
+        font-family: "gooddogregular","Reenie Beanie", arial, sans-serif;
     }
 
     p {
-        font-family: "Reenie Beanie",arial,sans-serif;
+        font-family: "gooddogregular", "Reenie Beanie", arial, sans-serif;
         font-size: 180%;
     }
 }
