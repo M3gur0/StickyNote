@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickyNotes", "StickyNotes\StickyNotes.csproj", "{FB593844-A499-4074-A678-73BFFC05C9FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickyNotes.Presentation", "StickyNotes.Presentation\StickyNotes.Presentation.csproj", "{FB593844-A499-4074-A678-73BFFC05C9FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{14A45397-EEF3-4871-9F50-CD2ACB3E9A94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Business", "2. Business", "{925F8AAC-11AB-4650-A30F-743B2CAECFF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickyNotes.Business", "StickyNotes.Business\StickyNotes.Business.csproj", "{26BE7F6C-DCBC-41B3-9759-D24A7D468178}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Data", "3. Data", "{61974D07-0CD2-40A8-94E9-A4C7057B07F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickyNotes.Data", "StickyNotes.Data\StickyNotes.Data.csproj", "{888E7F26-AE21-4FA1-BF50-848A27636768}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickyNotes.Business.Entities", "StickyNotes.Business.Entities\StickyNotes.Business.Entities.csproj", "{779325F2-A4F0-49BC-8B7E-2213AF447A37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickyNotes.Data.Interfaces", "StickyNotes.Data.Interfaces\StickyNotes.Data.Interfaces.csproj", "{0359F469-E7A9-4210-937F-5677958475F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +29,31 @@ Global
 		{FB593844-A499-4074-A678-73BFFC05C9FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB593844-A499-4074-A678-73BFFC05C9FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB593844-A499-4074-A678-73BFFC05C9FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26BE7F6C-DCBC-41B3-9759-D24A7D468178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26BE7F6C-DCBC-41B3-9759-D24A7D468178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26BE7F6C-DCBC-41B3-9759-D24A7D468178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26BE7F6C-DCBC-41B3-9759-D24A7D468178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888E7F26-AE21-4FA1-BF50-848A27636768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888E7F26-AE21-4FA1-BF50-848A27636768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888E7F26-AE21-4FA1-BF50-848A27636768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888E7F26-AE21-4FA1-BF50-848A27636768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{779325F2-A4F0-49BC-8B7E-2213AF447A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779325F2-A4F0-49BC-8B7E-2213AF447A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779325F2-A4F0-49BC-8B7E-2213AF447A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779325F2-A4F0-49BC-8B7E-2213AF447A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0359F469-E7A9-4210-937F-5677958475F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0359F469-E7A9-4210-937F-5677958475F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0359F469-E7A9-4210-937F-5677958475F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0359F469-E7A9-4210-937F-5677958475F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB593844-A499-4074-A678-73BFFC05C9FA} = {14A45397-EEF3-4871-9F50-CD2ACB3E9A94}
+		{26BE7F6C-DCBC-41B3-9759-D24A7D468178} = {925F8AAC-11AB-4650-A30F-743B2CAECFF8}
+		{888E7F26-AE21-4FA1-BF50-848A27636768} = {61974D07-0CD2-40A8-94E9-A4C7057B07F9}
+		{779325F2-A4F0-49BC-8B7E-2213AF447A37} = {925F8AAC-11AB-4650-A30F-743B2CAECFF8}
+		{0359F469-E7A9-4210-937F-5677958475F7} = {61974D07-0CD2-40A8-94E9-A4C7057B07F9}
 	EndGlobalSection
 EndGlobal
